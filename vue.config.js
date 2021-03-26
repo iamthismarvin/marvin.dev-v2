@@ -8,9 +8,6 @@ module.exports = {
           require('autoprefixer'),
         ],
       },
-      scss: {
-        prependData: `@import "@/assets/styles/main.scss";`,
-      },
     },
   },
   pwa: {
