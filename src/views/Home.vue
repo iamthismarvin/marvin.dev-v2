@@ -1,6 +1,11 @@
 <template>
   <div class="home">
-    <p>Hello! I am Marvin.</p>
+    <h1>Hello! I am Marvin.</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum illum inventore
+      commodi minus quae officia velit, quidem voluptate officiis perspiciatis atque aspernatur eius
+      laborum asperiores voluptatem, nobis quisquam adipisci.
+    </p>
   </div>
 </template>
 
