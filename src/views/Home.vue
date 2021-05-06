@@ -1,11 +1,14 @@
 <template>
   <div class="home">
-    <h1>Hello! I am Marvin.</h1>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum illum inventore
-      commodi minus quae officia velit, quidem voluptate officiis perspiciatis atque aspernatur eius
-      laborum asperiores voluptatem, nobis quisquam adipisci.
-    </p>
+    <Hero id="hero" title="Front-End Web Developer" />
+    <div class="p-4">
+      <h1>Hello! I am Marvin.</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum illum
+        inventore commodi minus quae officia velit, quidem voluptate officiis perspiciatis atque
+        aspernatur eius laborum asperiores voluptatem, nobis quisquam adipisci.
+      </p>
+    </div>
   </div>
 </template>
 
@@ -16,6 +19,9 @@ export default Vue.extend({
   name: 'Home',
   metaInfo: {
     title: 'Home',
+  },
+  components: {
+    Hero: () => import('@/components/Hero.vue'),
   },
 });
 </script>
