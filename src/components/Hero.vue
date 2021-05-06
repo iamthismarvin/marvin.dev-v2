@@ -1,12 +1,13 @@
 <template>
   <div
     :class="[
-      'hero bg-green-500 fh-screen flex justify-center items-center text-center text-6xl md:text-8xl lg:text-9xl px-4',
+      'hero bg-green-500 fh-screen flex flex-col lg:flex-row  justify-center items-center px-4',
     ]"
   >
-    <div :class="['hero__heading p-2 ']">
+    <div :class="['hero__heading p-2 text-6xl md:text-8xl lg:text-9xl text-center']">
       {{ title }}
     </div>
+    <Terminal />
   </div>
 </template>
 
@@ -21,6 +22,9 @@ export default Vue.extend({
       required: false,
       default: null,
     },
+  },
+  components: {
+    Terminal: () => import('@/components/Terminal.vue'),
   },
 });
 </script>
