@@ -1,18 +1,22 @@
 <template>
-  <div class="terminal text-white w-full w- lg:w-1/3">
+  <div class="terminal text-white w-11/12 lg:w-1/2">
     <div class="bg-gray-800 py-1 px-2 rounded-t">Terminal</div>
     <div
       class="terminal__body bg-gray-900 flex flex-col h-36 py-1 px-2 overflow-y-scroll"
       ref="terminal"
     >
-      <p class="text-gray-500">Enter 'help' or '--h' to list commands available.</p>
+      <p class="text-gray-500">Enter 'help' to list commands available.</p>
       <p v-for="entry in entries" :key="entry">{{ entry }}</p>
     </div>
     <div class="bg-gray-900 border-gray-700 border-t py-1 px-2 rounded-b">
       <div class="flex">
         <p class="mr-2 font-bold text-green-500">[m]</p>
         <form class="w-full" @submit.prevent="parseCommand">
-          <input class="terminal__cursor bg-transparent w-full" v-model="input" />
+          <input
+            class="terminal__cursor bg-transparent w-full"
+            v-model="input"
+            ref="terminalInput"
+          />
         </form>
       </div>
     </div>
@@ -40,6 +44,7 @@ export default Vue.extend({
   },
   mounted() {
     this.scrollToBottom();
+    this.$refs.terminalInput.focus();
   },
   updated() {
     this.scrollToBottom();

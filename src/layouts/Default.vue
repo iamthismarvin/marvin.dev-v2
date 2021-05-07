@@ -1,8 +1,10 @@
 <template>
   <div>
-    <Terminal class="fixed inset-x-0 mx-auto px-4 top-5" v-if="isTerminalActive" />
+    <transition name="fade">
+      <Terminal class="fixed inset-x-0 mx-auto top-5 transition-all" v-if="isTerminalActive" />
+    </transition>
     <button
-      class="bg-gray-900 hover:bg-gray-800 bottom-4 fixed p-3 right-4 rounded-full text-green-500"
+      class="bg-gray-900 hover:bg-gray-800 bottom-4 fixed p-3 right-4 rounded-full text-green-500 transition-all outline-none"
       @click="toggleTerminal"
     >
       <svg
@@ -44,3 +46,15 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+</style>
