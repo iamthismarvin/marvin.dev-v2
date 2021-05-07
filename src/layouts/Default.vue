@@ -44,6 +44,13 @@ export default Vue.extend({
       this.isTerminalActive = !this.isTerminalActive;
     },
   },
+  mounted() {
+    window.addEventListener('keyup', event => {
+      if (event.ctrlKey && event.key === '`') {
+        this.toggleTerminal();
+      }
+    });
+  },
 });
 </script>
 
