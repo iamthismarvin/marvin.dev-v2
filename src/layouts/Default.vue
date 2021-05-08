@@ -30,18 +30,24 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { mapActions, mapGetters } from 'vuex';
 
 export default Vue.extend({
   name: 'Default',
-  data: () => ({
-    isTerminalActive: false,
-  }),
   components: {
     Terminal: () => import('@/components/Terminal/Terminal.vue'),
   },
+  computed: {
+    ...mapGetters({
+      isTerminalActive: 'terminal/isTerminalActive',
+    }),
+  },
   methods: {
+    ...mapActions({
+      SET_TERMINAL_STATE: 'terminal/SET_TERMINAL_STATE',
+    }),
     toggleTerminal() {
-      this.isTerminalActive = !this.isTerminalActive;
+      this.SET_TERMINAL_STATE(!this.isTerminalActive);
     },
   },
   mounted() {
