@@ -26,6 +26,7 @@
 <script>
 import Vue from 'vue';
 import parser from '@/components/Terminal/scripts/parser';
+import { mapActions } from 'vuex';
 
 export default Vue.extend({
   name: 'Terminal',
@@ -34,13 +35,13 @@ export default Vue.extend({
     input: '',
   }),
   methods: {
+    ...mapActions({
+      SET_TERMINAL_STATE: 'terminal/SET_TERMINAL_STATE',
+    }),
     parseCommand() {
       const result = parser(this.input);
       this.entries.push(this.input);
       switch (result[0]) {
-        case 'CLEAR':
-          this.entries = [];
-          break;
         case 'CD':
           this.$scrollTo(`#${result[1]}`, 750, {
             easing: 'ease-in-out',
@@ -52,6 +53,12 @@ export default Vue.extend({
             y: true,
           });
           this.entries.push(result[2]);
+          break;
+        case 'CLEAR':
+          this.entries = [];
+          break;
+        case 'EXIT':
+          this.SET_TERMINAL_STATE(false);
           break;
         case 'HELP':
           result.shift();

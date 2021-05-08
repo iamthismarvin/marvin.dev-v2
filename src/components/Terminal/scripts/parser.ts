@@ -14,12 +14,14 @@ const parser = (command: string): string | string[] => {
   if (matchCommand) {
     const value = matchCommand[1];
     switch (value) {
+      case 'clear':
+        return commands.clear();
+      case 'exit':
+        return commands.exit();
       case 'help':
         return commands.help();
       case 'ls':
         return commands.listSections();
-      case 'clear':
-        return commands.clear();
       default: {
         break;
       }
