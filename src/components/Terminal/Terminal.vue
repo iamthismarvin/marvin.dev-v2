@@ -6,7 +6,7 @@
       ref="terminal"
     >
       <p class="text-gray-500">Enter 'help' to list commands available.</p>
-      <p v-for="entry in entries" :key="entry">{{ entry }}</p>
+      <p v-for="entry in entries" :key="entry.id">{{ entry }}</p>
     </div>
     <div class="bg-gray-900 border-gray-700 border-t py-1 px-2 rounded-b">
       <div class="flex">
@@ -25,6 +25,7 @@
 
 <script>
 import Vue from 'vue';
+import parser from '@/components/Terminal/scripts/parser';
 
 export default Vue.extend({
   name: 'Terminal',
@@ -34,7 +35,24 @@ export default Vue.extend({
   }),
   methods: {
     parseCommand() {
+      const result = parser(this.input);
       this.entries.push(this.input);
+      switch (result[0]) {
+        case 'CLEAR':
+          this.entries = [];
+          break;
+        case 'CD':
+          // Move to (result[1]);
+          this.entries.push(result[2]);
+          break;
+        case 'HELP':
+          result.shift();
+          result.forEach(line => this.entries.push(line));
+          break;
+        default:
+          this.entries.push(result);
+          break;
+      }
       this.input = '';
     },
     scrollToBottom() {

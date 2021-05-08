@@ -37,7 +37,7 @@ export default Vue.extend({
     isTerminalActive: false,
   }),
   components: {
-    Terminal: () => import('@/components/Terminal.vue'),
+    Terminal: () => import('@/components/Terminal/Terminal.vue'),
   },
   methods: {
     toggleTerminal() {
