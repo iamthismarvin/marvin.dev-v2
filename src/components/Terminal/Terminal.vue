@@ -1,5 +1,5 @@
 <template>
-  <div class="terminal text-white w-11/12 lg:w-1/2">
+  <div class="terminal shadow-xl text-white w-11/12 lg:w-1/2">
     <div class="bg-gray-800 py-1 px-2 rounded-t">Terminal</div>
     <div
       class="terminal__body bg-gray-900 flex flex-col h-36 py-1 px-2 overflow-y-scroll"
