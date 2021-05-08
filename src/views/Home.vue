@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <Hero id="hero" title="Front-End Web Developer" />
-    <div class="p-4">
+    <Hero id="Home" title="Front-End Web Developer" />
+    <div id="Contact" class="p-4">
       <h1>Hello! I am Marvin.</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum illum

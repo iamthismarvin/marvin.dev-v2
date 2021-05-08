@@ -27,6 +27,16 @@
 import Vue from 'vue';
 import parser from '@/components/Terminal/scripts/parser';
 
+const options = {
+  easing: 'ease-in-out',
+  lazy: false,
+  offset: 0,
+  force: true,
+  cancelable: true,
+  x: false,
+  y: true,
+};
+
 export default Vue.extend({
   name: 'Terminal',
   data: () => ({
@@ -42,7 +52,9 @@ export default Vue.extend({
           this.entries = [];
           break;
         case 'CD':
-          // Move to (result[1]);
+          setTimeout(() => {
+            this.$scrollTo(`#${result[1]}`, 500, options);
+          }, 100);
           this.entries.push(result[2]);
           break;
         case 'HELP':
