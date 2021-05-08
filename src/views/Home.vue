@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Hero id="Home" title="Front-End Web Developer" />
-    <div id="Contact" class="p-4">
+    <div id="Stack" class="p-4">
       <h1>Hello! I am Marvin.</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum illum
@@ -9,6 +9,7 @@
         aspernatur eius laborum asperiores voluptatem, nobis quisquam adipisci.
       </p>
     </div>
+    <Contact id="Contact" />
   </div>
 </template>
 
@@ -21,7 +22,8 @@ export default Vue.extend({
     title: 'Home',
   },
   components: {
-    Hero: () => import('@/components/Hero.vue'),
+    Contact: () => import('@/sections/Contact.vue'),
+    Hero: () => import('@/sections/Hero.vue'),
   },
 });
 </script>
