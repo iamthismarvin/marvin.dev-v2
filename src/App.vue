@@ -12,8 +12,8 @@ import Vue from 'vue';
 export default Vue.extend({
   name: 'App',
   metaInfo: {
-    title: 'Marvin Parada',
-    titleTemplate: `%s - Marvin Parada | Front-end Web Developer`,
+    title: 'Marvin Parada | Front-end Web Developer',
+    // titleTemplate: `%s - Marvin Parada | Front-end Web Developer`,
     meta: [
       { name: 'description', content: 'Front-end Web Developer' },
       {

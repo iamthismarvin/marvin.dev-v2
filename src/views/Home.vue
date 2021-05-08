@@ -18,9 +18,6 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'Home',
-  metaInfo: {
-    title: 'Home',
-  },
   components: {
     Contact: () => import('@/sections/Contact.vue'),
     Hero: () => import('@/sections/Hero.vue'),
