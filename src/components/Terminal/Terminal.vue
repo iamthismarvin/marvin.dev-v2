@@ -26,6 +26,7 @@
 <script>
 import Vue from 'vue';
 import parser from '@/components/Terminal/scripts/parser';
+import scrollOptions from '@/assets/scripts/scrollOptions';
 import { mapActions } from 'vuex';
 
 export default Vue.extend({
@@ -43,15 +44,7 @@ export default Vue.extend({
       this.entries.push(this.input);
       switch (result[0]) {
         case 'CD':
-          this.$scrollTo(`#${result[1]}`, 750, {
-            easing: 'ease-in-out',
-            lazy: false,
-            offset: 0,
-            force: true,
-            cancelable: false,
-            x: false,
-            y: true,
-          });
+          this.$scrollTo(`#${result[1]}`, 750, scrollOptions);
           this.entries.push(result[2]);
           break;
         case 'CLEAR':
