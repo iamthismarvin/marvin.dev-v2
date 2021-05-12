@@ -6,6 +6,7 @@
     <transition name="fade">
       <Menu class="fixed z-30" v-if="isMenuActive" />
     </transition>
+    <Navigation class="absolute" />
     <div class="bottom-4 flex flex-col fixed right-4 z-50">
       <Button icon="M4 6h16M4 12h16M4 18h16" :action="toggleMenu" />
       <Button
@@ -28,6 +29,7 @@ export default Vue.extend({
   components: {
     Button: () => import('@/components/Button.vue'),
     Menu: () => import('@/components/Menu.vue'),
+    Navigation: () => import('@/components/Navigation.vue'),
     Terminal: () => import('@/components/Terminal/Terminal.vue'),
   },
   computed: {
