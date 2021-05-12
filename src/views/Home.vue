@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Hero id="Home" title="Front-End Web Developer" />
+    <Hero id="Home" />
     <div id="Stack" class="p-4">
       <h1>Hello! I am Marvin.</h1>
       <p>

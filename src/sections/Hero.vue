@@ -1,11 +1,11 @@
 <template>
-  <div
-    :class="[
-      'hero bg-green-500 fh-screen flex flex-col lg:flex-row  justify-center items-center px-4',
-    ]"
-  >
-    <div :class="['hero__heading p-2 text-6xl md:text-8xl lg:text-9xl text-center']">
-      {{ title }}
+  <div :class="['bg-blue-50 flex flex-col lg:flex-row h-screen justify-center items-center px-4']">
+    <div>
+      <p class="font-heading font-bold text-4xl md:text-6xl lg:text-7xl">Hello!</p>
+      <p class="font-heading font-bold text-6xl md:text-8xl lg:text-9xl text-brand-green">
+        I'm Marvin
+      </p>
+      <p class="text-3xl md:text-4xl text-right">Front-End Web Developer</p>
     </div>
   </div>
 </template>
@@ -15,24 +15,5 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'Hero',
-  props: {
-    title: {
-      type: String,
-      required: false,
-      default: null,
-    },
-  },
 });
 </script>
-
-<style lang="scss" scoped>
-.hero {
-  height: calc(100vh);
-
-  &__heading {
-    font-family: 'GeneralSans';
-    font-weight: bold;
-    max-width: 800px;
-  }
-}
-</style>
