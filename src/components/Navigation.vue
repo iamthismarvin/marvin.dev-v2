@@ -1,10 +1,9 @@
 <template>
-  <nav class="flex justify-between p-6 top-0 w-full">
+  <nav class="flex justify-between items-start p-6 top-0 w-full">
     <img src="@/assets/images/logo.svg" alt="logo" class="h-8" />
-    <div class="font-bold">
-      <a href="#" class="mr-4">Projects</a>
-      <a href="#">Terminal</a>
-    </div>
+    <a href="https://github.com/iamthismarvin" target="_blank" ref="noopener noreferrer">
+      <img src="@/assets/images/icons/github.svg" alt="github" class="h-8" />
+    </a>
   </nav>
 </template>
 
