@@ -10,7 +10,7 @@
     </div>
     <div class="bg-gray-900 border-gray-700 border-t py-1 px-2 rounded-b">
       <div class="flex">
-        <p class="mr-2 font-bold text-green-500">[m]</p>
+        <p class="mr-2 font-bold text-brand-green">[m]</p>
         <form class="w-full" @submit.prevent="parseCommand">
           <input
             class="terminal__cursor bg-transparent w-full"

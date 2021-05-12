@@ -1,6 +1,6 @@
 <template>
   <button
-    class="bg-gray-900 hover:bg-gray-800 border-4 border-green-500 mt-1 p-3 rounded-full text-green-500 transition-all"
+    class="bg-gray-900 hover:bg-gray-800 border-4 border-brand-green mt-1 p-3 rounded-full text-brand-green transition-all"
     @click="action"
   >
     <svg
