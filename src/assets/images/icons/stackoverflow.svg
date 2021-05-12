@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 250 250" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+    xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-2100,-1216)">
+        <g id="icon" transform="matrix(0.995525,0,0,0.995525,8.81447,5.21845)">
+            <rect x="2100.59" y="1216.22" width="251.124" height="251.124" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="2100.59" y="1216.22" width="251.124" height="251.124"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(2.89981,0,0,2.89981,2054.62,1173.02)">
+                    <g id="social_light">
+                        <g id="stack_overflow">
+                            <path d="M84.4,93.8L84.4,70.6L92.1,70.6L92.1,101.5L22.6,101.5L22.6,70.6L30.3,70.6L30.3,93.8L84.4,93.8Z" style="fill:rgb(55,65,81);fill-rule:nonzero;"/>
+                            <path d="M38.8,68.4L76.6,76.3L78.2,68.7L40.4,60.8L38.8,68.4ZM43.8,50.4L78.8,66.7L82,59.7L47,43.3L43.8,50.4ZM53.5,33.2L83.2,57.9L88.1,52L58.4,27.3L53.5,33.2ZM72.7,14.9L66.5,19.5L89.5,50.5L95.7,45.9L72.7,14.9ZM38,86L76.6,86L76.6,78.3L38,78.3L38,86Z" style="fill:rgb(55,65,81);fill-rule:nonzero;"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
