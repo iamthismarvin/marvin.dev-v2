@@ -1,11 +1,19 @@
 <template>
   <section class="projects p-4 text-center text-white">
     <h1>Projects</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, at ipsa tempore quos eaque
-      voluptatum impedit corrupti eligendi perspiciatis pariatur qui necessitatibus repudiandae
-      repellendus dolore iste minus dolorum fugit vero?
-    </p>
+    <div v-for="project in projects" :key="project.index" class="my-4">
+      <h4>{{ project.name }}</h4>
+      <p>
+        Repository:
+        <a :href="project.repository" target="_blank" rel="noopener noreferrer">{{
+          project.name
+        }}</a>
+      </p>
+      <p v-if="project.demo">
+        Demo:
+        <a :href="project.demo" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
+      </p>
+    </div>
   </section>
 </template>
 
@@ -14,6 +22,23 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'Projects',
+  data: () => ({
+    projects: [
+      {
+        name: 'Craftsmith',
+        repository: 'https://github.com/iamthismarvin/craftsmith',
+        demo: 'https://craftsmith.netlify.app',
+      },
+      {
+        name: 'Rodee-20',
+        repository: 'https://github.com/iamthismarvin/rodee-20',
+      },
+      {
+        name: 'marvin.dev',
+        repository: 'https://github.com/iamthismarvin/marvin.dev-v2',
+      },
+    ],
+  }),
 });
 </script>
 <style lang="scss" scoped>
