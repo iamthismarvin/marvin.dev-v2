@@ -20,6 +20,7 @@ export const help = (): string[] => {
     `HELP`,
     `cd [section] | Move to section.`,
     `clear | Clear terminal log.`,
+    `exit | Close terminal window.`,
     `help | List available commands.`,
     `ls | List available sections.`,
   ];
