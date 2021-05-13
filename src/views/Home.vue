@@ -1,14 +1,8 @@
 <template>
   <div class="home">
     <Hero id="Home" />
-    <div id="Stack" class="p-4">
-      <h1>Hello! I am Marvin.</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum illum
-        inventore commodi minus quae officia velit, quidem voluptate officiis perspiciatis atque
-        aspernatur eius laborum asperiores voluptatem, nobis quisquam adipisci.
-      </p>
-    </div>
+    <Stack id="Stack" />
+    <Projects id="Projects" />
     <Contact id="Contact" />
   </div>
 </template>
@@ -21,6 +15,8 @@ export default Vue.extend({
   components: {
     Contact: () => import('@/sections/Contact.vue'),
     Hero: () => import('@/sections/Hero.vue'),
+    Projects: () => import('@/sections/Projects.vue'),
+    Stack: () => import('@/sections/Stack.vue'),
   },
 });
 </script>
