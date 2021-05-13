@@ -1,8 +1,5 @@
 <template>
-  <button
-    class="bg-gray-900 hover:bg-gray-800 border-4 border-brand-green mt-1 p-3 rounded-full text-brand-green transition-all"
-    @click="action"
-  >
+  <button class="transition-all" @click="action">
     <svg
       class="h-8 w-8"
       fill="none"
@@ -10,7 +7,7 @@
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="icon"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" :d="icon"></path>
     </svg>
   </button>
 </template>

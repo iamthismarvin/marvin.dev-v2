@@ -2,7 +2,7 @@
   <nav class="flex flex-col h-screen items-center justify-center text-white w-screen">
     <div class="absolute bg-gray-900 h-full opacity-80 w-full" @click="closeMenu()"></div>
     <div
-      class="bg-gray-900 border-8 border-pink-700 flex flex-col items-center justify-center h-5/6 lg:h-4/6 relative rounded shadow-lg w-5/6 lg:w-4/6 z-50"
+      class="bg-gray-900 border-8 border-pink-700 flex flex-col items-center justify-center h-4/6 lg:h-4/6 relative rounded shadow-lg w-5/6 lg:w-4/6 z-50"
     >
       <ul class="text-center">
         <li
