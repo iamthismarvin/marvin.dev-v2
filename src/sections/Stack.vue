@@ -1,11 +1,26 @@
 <template>
   <div class="bg-blue-50 p-4">
     <h1>Stack</h1>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem earum illum inventore
-      commodi minus quae officia velit, quidem voluptate officiis perspiciatis atque aspernatur eius
-      laborum asperiores voluptatem, nobis quisquam adipisci.
-    </p>
+    <div>
+      <h3>Tech</h3>
+      <TechItem
+        v-for="item in stack.tech"
+        :key="item.id"
+        :icon="item.icon"
+        :name="item.name"
+        :url="item.url"
+      />
+    </div>
+    <div>
+      <h3>Tools</h3>
+      <TechItem
+        v-for="item in stack.tools"
+        :key="item.id"
+        :icon="item.icon"
+        :name="item.name"
+        :url="item.url"
+      />
+    </div>
   </div>
 </template>
 
@@ -14,5 +29,17 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'Stack',
+  data: () => ({
+    stack: {
+      tech: [{ icon: 'vue-dot-js', name: 'Vue.JS', url: 'https://vuejs.org/' }],
+      tools: [
+        { icon: 'git', name: 'Git', url: 'https://git-scm.com/' },
+        { icon: 'eslint', name: 'ESLint', url: 'https://eslint.org/' },
+      ],
+    },
+  }),
+  components: {
+    TechItem: () => import('@/components/TechItem.vue'),
+  },
 });
 </script>
