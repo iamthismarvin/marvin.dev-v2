@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue-50 p-4">
+  <section class="bg-blue-50 p-4">
     <h1>Stack</h1>
     <div>
       <h3>Tech</h3>
@@ -21,7 +21,7 @@
         :url="item.url"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
