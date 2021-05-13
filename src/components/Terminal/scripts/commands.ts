@@ -1,4 +1,4 @@
-const sections = ['Home', 'Stack', 'Projects', 'Contact'];
+import sections from '@/assets/scripts/sections';
 
 export const changeDirectory = (section: string): string | string[] => {
   if (sections.includes(section)) {

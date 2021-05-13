@@ -20,14 +20,17 @@
 
 <script lang="ts">
 import scrollOptions from '@/assets/scripts/scrollOptions';
+import sections from '@/assets/scripts/sections';
 import Vue from 'vue';
 import { mapActions } from 'vuex';
 
 export default Vue.extend({
   name: 'Menu',
-  data: () => ({
-    sections: ['Home', 'Stack', 'Contact'],
-  }),
+  computed: {
+    sections() {
+      return sections;
+    },
+  },
   methods: {
     ...mapActions({
       SET_MENU_STATE: 'menu/SET_MENU_STATE',
