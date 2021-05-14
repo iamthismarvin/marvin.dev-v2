@@ -1,5 +1,6 @@
 <template>
-  <div class="card bg-blue-50 border-gray-700 p-4 rounded shadow-lg text-gray-700">
+  <div class="card bg-blue-50 p-4 rounded self-start shadow-xl text-gray-700">
+    <h3 v-if="title" class="border-pink-700 mb-4 pb-2">{{ title }}</h3>
     <slot />
   </div>
 </template>
@@ -9,11 +10,16 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'Card',
+  props: {
+    title: { type: String, required: false },
+  },
 });
 </script>
 
 <style lang="scss" scoped>
 .card {
-  border-width: 6px;
+  h3 {
+    border-bottom-width: 3px;
+  }
 }
 </style>

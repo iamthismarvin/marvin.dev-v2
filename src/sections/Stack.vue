@@ -1,9 +1,8 @@
 <template>
-  <section class="stack bg-blue-200 p-4 text-center text-white">
+  <section class="stack bg-blue-200 p-6 text-center text-white">
     <h1 class="mb-2">Stack</h1>
     <div class="flex flex-col md:flex-row flex-wrap justify-evenly">
-      <Card class="stack__card">
-        <h3>Tech</h3>
+      <Card class="stack__card" title="Current Stack">
         <TechItem
           v-for="item in stack.tech"
           :key="item.id"
@@ -13,8 +12,7 @@
           class="mb-2"
         />
       </Card>
-      <Card class="stack__card">
-        <h3>Tools & OS</h3>
+      <Card class="stack__card" title="Tools & OS">
         <TechItem
           v-for="item in stack.tools"
           :key="item.id"
@@ -24,8 +22,7 @@
           class="mb-2"
         />
       </Card>
-      <Card class="stack__card">
-        <h3>Familiar w/</h3>
+      <Card class="stack__card" title="Familiar w/">
         <TechItem
           v-for="item in stack.familiar"
           :key="item.id"
@@ -35,8 +32,7 @@
           class="mb-2"
         />
       </Card>
-      <Card class="stack__card">
-        <h3>Additional Experience</h3>
+      <Card class="stack__card" title="Additional Experience">
         <ul>
           <li
             v-for="item in stack.additional_experience"
@@ -138,8 +134,8 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .stack {
-  background-color: #04a89c;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2304a197' fill-opacity='1'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-color: #29343d;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231a242c' fill-opacity='1'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
   &__card {
     @apply w-full md:w-80 my-2;
