@@ -1,18 +1,16 @@
 <template>
-  <section class="projects p-4 text-center text-white">
-    <h1>Projects</h1>
-    <div v-for="project in projects" :key="project.index" class="my-4">
-      <h4>{{ project.name }}</h4>
-      <p>
-        Repository:
-        <a :href="project.repository" target="_blank" rel="noopener noreferrer">{{
-          project.name
-        }}</a>
-      </p>
-      <p v-if="project.demo">
-        Demo:
-        <a :href="project.demo" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
-      </p>
+  <section class="projects p-4 text-white">
+    <h1 class="mb-4 text-center">Projects</h1>
+    <div v-for="project in projects" :key="project.index" class="flex flex-wrap justify-center">
+      <Project
+        class="mb-6 w-96"
+        :name="project.name"
+        :thumbnail="project.thumbnail"
+        :tags="project.tags"
+        :description="project.description"
+        :repositoryUrl="project.repositoryUrl"
+        :demoUrl="project.demoUrl"
+      />
     </div>
   </section>
 </template>
@@ -26,19 +24,32 @@ export default Vue.extend({
     projects: [
       {
         name: 'Craftsmith',
-        repository: 'https://github.com/iamthismarvin/craftsmith',
-        demo: 'https://craftsmith.netlify.app',
+        thumbnail: 'craftsmith.png',
+        tags: ['vue.js 3', 'typescript', 'tailwind', 'indexeddb', 'pwa'],
+        description: 'A simple RPG game fully developed with front-end technology.',
+        repositoryUrl: 'https://github.com/iamthismarvin/craftsmith',
+        demoUrl: 'https://craftsmith.netlify.app',
       },
       {
         name: 'Rodee-20',
-        repository: 'https://github.com/iamthismarvin/rodee-20',
+        thumbnail: 'rodee-20.png',
+        tags: ['javascript', 'es6', 'discord.js'],
+        description:
+          'Rodee-20 is a Discord bot that helps you roll polyhedral dice by entering commands in the chat.',
+        repositoryUrl: 'https://github.com/iamthismarvin/rodee-20',
       },
       {
-        name: 'marvin.dev',
-        repository: 'https://github.com/iamthismarvin/marvin.dev-v2',
+        name: 'Marvin.DEV',
+        thumbnail: 'marvin-dev.png',
+        tags: ['vue.js', 'typescript', 'tailwind', 'pwa'],
+        description: 'Personal website [marvin.dev] version 2.0!',
+        repositoryUrl: 'https://github.com/iamthismarvin/marvin.dev-v2',
       },
     ],
   }),
+  components: {
+    Project: () => import('@/components/Project.vue'),
+  },
 });
 </script>
 <style lang="scss" scoped>
