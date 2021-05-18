@@ -1,16 +1,20 @@
 <template>
   <section class="projects p-4 text-white">
     <h1 class="mb-4 text-center">Projects</h1>
-    <div v-for="project in projects" :key="project.index" class="flex flex-wrap justify-center">
-      <Project
-        class="mb-6 w-96"
-        :name="project.name"
-        :thumbnail="project.thumbnail"
-        :tags="project.tags"
-        :description="project.description"
-        :repositoryUrl="project.repositoryUrl"
-        :demoUrl="project.demoUrl"
-      />
+    <div class="flex justify-center">
+      <div class="flex flex-wrap justify-center">
+        <Project
+          v-for="project in projects"
+          :key="project.index"
+          class="mb-6 mx-3 max-w-sm"
+          :name="project.name"
+          :thumbnail="project.thumbnail"
+          :tags="project.tags"
+          :description="project.description"
+          :repositoryUrl="project.repositoryUrl"
+          :demoUrl="project.demoUrl"
+        />
+      </div>
     </div>
   </section>
 </template>

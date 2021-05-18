@@ -1,9 +1,9 @@
 <template>
-  <div class="project bg-blue-50 rounded shadow-xl text-gray-700">
+  <div class="project bg-blue-50 pb-12 relative rounded shadow-xl text-gray-700">
     <img
       :src="require(`@/assets/images/projects/${thumbnail}`)"
       :alt="name"
-      class="h-48 lg:h-64 object-cover rounded-t w-full"
+      class="h-48 lg:h-64 object-cover rounded-t shadow-sm w-full"
     />
     <div class="p-4">
       <h3 class="border-pink-700 mb-4 pb-2 text-center">{{ name }}</h3>
@@ -18,7 +18,7 @@
       </ul>
       <p>{{ description }}</p>
     </div>
-    <div class="flex justify-between rounded-b">
+    <div class="absolute bottom-0 flex justify-between rounded-b w-full">
       <a
         :href="repositoryUrl"
         target="_blank"
