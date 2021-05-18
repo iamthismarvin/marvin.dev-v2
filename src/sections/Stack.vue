@@ -1,48 +1,50 @@
 <template>
   <section class="stack bg-blue-200 p-6 text-center text-white">
     <h1 class="mb-2">Stack</h1>
-    <div class="flex flex-col md:flex-row flex-wrap justify-evenly">
-      <Card class="stack__card" title="Current Stack">
-        <TechItem
-          v-for="item in stack.tech"
-          :key="item.id"
-          :icon="item.icon"
-          :name="item.name"
-          :url="item.url"
-          class="mb-2"
-        />
-      </Card>
-      <Card class="stack__card" title="Tools & OS">
-        <TechItem
-          v-for="item in stack.tools"
-          :key="item.id"
-          :icon="item.icon"
-          :name="item.name"
-          :url="item.url"
-          class="mb-2"
-        />
-      </Card>
-      <Card class="stack__card" title="Familiar w/">
-        <TechItem
-          v-for="item in stack.familiar"
-          :key="item.id"
-          :icon="item.icon"
-          :name="item.name"
-          :url="item.url"
-          class="mb-2"
-        />
-      </Card>
-      <Card class="stack__card" title="Additional Experience">
-        <ul>
-          <li
-            v-for="item in stack.additional_experience"
-            :key="item.index"
-            class="font-bold font-heading list-disc m-3 text-left"
-          >
-            {{ item }}
-          </li>
-        </ul>
-      </Card>
+    <div class="flex justify-center">
+      <div class="flex flex-wrap justify-center">
+        <Card class="stack__card" title="Current Stack">
+          <TechItem
+            v-for="item in stack.tech"
+            :key="item.id"
+            :icon="item.icon"
+            :name="item.name"
+            :url="item.url"
+            class="mb-2"
+          />
+        </Card>
+        <Card class="stack__card" title="Tools & OS">
+          <TechItem
+            v-for="item in stack.tools"
+            :key="item.id"
+            :icon="item.icon"
+            :name="item.name"
+            :url="item.url"
+            class="mb-2"
+          />
+        </Card>
+        <Card class="stack__card" title="Familiar w/">
+          <TechItem
+            v-for="item in stack.familiar"
+            :key="item.id"
+            :icon="item.icon"
+            :name="item.name"
+            :url="item.url"
+            class="mb-2"
+          />
+        </Card>
+        <Card class="stack__card" title="Additional Experience">
+          <ul>
+            <li
+              v-for="item in stack.additional_experience"
+              :key="item.index"
+              class="font-bold font-heading list-disc m-3 text-left"
+            >
+              {{ item }}
+            </li>
+          </ul>
+        </Card>
+      </div>
     </div>
   </section>
 </template>
@@ -138,7 +140,7 @@ export default Vue.extend({
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231a242c' fill-opacity='1'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
   &__card {
-    @apply w-full md:w-80 my-2;
+    @apply mx-2 my-2 w-full md:w-80;
   }
 }
 </style>
