@@ -36,6 +36,9 @@
         >Demo</a
       >
     </div>
+    <div v-if="isWorkInProgress" class="absolute bg-pink-700 p-1 right-2 rounded text-white top-2">
+      Work in Progress
+    </div>
   </div>
 </template>
 
@@ -51,6 +54,7 @@ export default Vue.extend({
     description: { type: String, required: true },
     repositoryUrl: { type: String, required: true },
     demoUrl: { type: String, required: false },
+    isWorkInProgress: { type: Boolean, required: false },
   },
 });
 </script>

@@ -13,6 +13,7 @@
           :description="project.description"
           :repositoryUrl="project.repositoryUrl"
           :demoUrl="project.demoUrl"
+          :isWorkInProgress="project.isWorkInProgress"
         />
       </div>
     </div>
@@ -33,6 +34,7 @@ export default Vue.extend({
         description: 'A simple RPG game fully developed with front-end technology.',
         repositoryUrl: 'https://github.com/iamthismarvin/craftsmith',
         demoUrl: 'https://craftsmith.netlify.app',
+        isWorkInProgress: true,
       },
       {
         name: 'Rodee-20',
