@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <Hero id="Home" />
-    <Stack id="Stack" />
     <Projects id="Projects" />
+    <Stack id="Stack" />
     <Contact id="Contact" />
   </div>
 </template>
