@@ -28,6 +28,14 @@ export default Vue.extend({
   data: () => ({
     projects: [
       {
+        name: 'Movie Library API',
+        thumbnail: 'movie-library-api.png',
+        tags: ['adonisjs', 'typescript', 'postgresql'],
+        description: 'API for Movie Library project.',
+        repositoryUrl: 'https://github.com/iamthismarvin/movie-library-api',
+        isWorkInProgress: true,
+      },
+      {
         name: 'Craftsmith',
         thumbnail: 'craftsmith.png',
         tags: ['vue.js 3', 'typescript', 'tailwind', 'indexeddb', 'pwa'],
